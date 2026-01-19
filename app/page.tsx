@@ -1,21 +1,27 @@
-import Link from "next/link";
+// import Link from "next/link";
+// import { Counter } from "./Counter";
+import ClientSaver from "./ClientSaver";
 
-export default function Home()
+// export default function Home()
+// {
+//   return(
+//     <>
+//       <h1>Server Page</h1>
+//       <Counter/>
+//     </>
+//   )
+// }
+
+export default function Page()
 {
+  const data = {
+    theme : "dark",
+    name : "dharaneesh",
+    userId : 14
+  };
   return(
-    <main className="p-2.5">
-      <h1>Home Page</h1>
-      <nav className="mt-2">
-        <ul>
-          <li>
-            <Link href="/about" > Go to About</Link>
-          </li>
-          <li>
-            <Link href="/contact" > Go to contact</Link>
-          </li>
-        </ul>
-      </nav>
-
-    </main>
+    <>
+      <ClientSaver data={data}/>
+    </>
   )
 }
